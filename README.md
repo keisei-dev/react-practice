@@ -1,8 +1,6 @@
 # Reusable Mega Navbar
 
-freeCodeCamp React workshop (11 steps): [Build a Reusable Mega Navbar](https://www.freecodecamp.org/learn/full-stack-developer/workshop-reusable-mega-navbar/).
-
-Practice building a reusable React functional component with a dropdown submenu.
+A small React practice project: a reusable navbar with a dropdown submenu.
 
 ## Run locally
 
@@ -11,8 +9,8 @@ npm install
 npm run dev
 ```
 
-## What it includes
+## What’s included
 
-- `Navbar` functional component with Dashboard, Widgets, and Apps
+- `Navbar` functional component (Dashboard, Widgets, Apps)
 - Apps submenu: Calendar, Chat, Email
-- freeCodeCamp workshop styles (hover / focus-within submenu)
+- Hover / focus-within styles for the submenu
