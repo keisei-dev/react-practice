@@ -8,6 +8,7 @@
     "dev:navbar": "vite",
     "dev:card": "vite --config vite.card.config.js",
     "dev:toggle": "vite --config vite.toggle.config.js",
+    "dev:fruits": "vite --config vite.fruits.config.js",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
