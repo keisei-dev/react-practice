@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:navbar": "vite",
+    "dev:navbar": "vite --open /practices/reusable-mega-navbar/",
     "dev:card": "vite --config vite.card.config.js",
     "dev:toggle": "vite --config vite.toggle.config.js",
     "dev:fruits": "vite --config vite.fruits.config.js",
@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

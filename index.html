@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0b1426;
+        --navy-card: #152338;
+        --navy-hover: #1c2f4a;
+        --text: #f4f8fc;
+        --muted: #9eb3cb;
+        --accent: #61dafb;
+        --line: rgba(97, 218, 251, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: "Noto Sans JP", sans-serif;
+        background-color: var(--navy);
+      }
+
+      main {
+        width: min(880px, calc(100% - 2.5rem));
+        margin: 0 auto;
+        padding: clamp(2.5rem, 7vh, 4.5rem) 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .brand {
+        margin-bottom: 1.75rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4.5vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.15;
+      }
+
+      .lede {
+        margin: 0.55rem 0 0;
+        color: var(--muted);
+        font-size: 0.98rem;
+        font-weight: 400;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
+
+      .count {
+        display: inline-block;
+        margin-top: 0.7rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .count strong {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      a {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 0.85rem;
+        align-items: center;
+        min-height: 100%;
+        padding: 1.1rem 1.15rem;
+        text-decoration: none;
+        color: inherit;
+        background: var(--navy-card);
+        border: 1px solid var(--line);
+        border-radius: 0.9rem;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+
+      a:hover,
+      a:focus-visible {
+        transform: translateY(-2px);
+        background: var(--navy-hover);
+        border-color: var(--accent);
+        outline: none;
+      }
+
+      .num {
+        display: grid;
+        place-items: center;
+        min-width: 2.2rem;
+        height: 1.9rem;
+        padding: 0 0.35rem;
+        border-radius: 0.5rem;
+        background: rgba(97, 218, 251, 0.12);
+        color: var(--accent);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .copy {
+        min-width: 0;
+      }
+
+      .title {
+        display: block;
+        margin-bottom: 0.28rem;
+        font-size: 1.02rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.3;
+      }
+
+      .desc {
+        display: block;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.45;
+      }
+
+      .topic {
+        display: inline-block;
+        margin-top: 0.55rem;
+        color: #b6c9dc;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .arrow {
+        color: var(--muted);
+        font-size: 1.05rem;
+        transition: transform 0.2s ease, color 0.2s ease;
+      }
+
+      a:hover .arrow,
+      a:focus-visible .arrow {
+        color: var(--accent);
+        transform: translateX(3px);
+      }
+
+      @media (max-width: 720px) {
+        main {
+          justify-content: flex-start;
+          padding-top: 2.5rem;
+        }
+
+        ul {
+          grid-template-columns: 1fr;
+        }
+
+        a {
+          grid-template-columns: auto 1fr;
+        }
+
+        .arrow {
+          display: none;
+        }
+
+        .lede {
+          white-space: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <h1>React Practice</h1>
+        <p class="lede">Small React exercises — pick one below.</p>
+        <p class="count"><strong>5</strong> practices ready</p>
+      </header>
+
+      <ul>
+        <li>
+          <a href="/practices/reusable-mega-navbar/">
+            <span class="num">#1</span>
+            <span class="copy">
+              <span class="title">Reusable Mega Navbar</span>
+              <span class="desc">Dropdown navbar as a reusable component.</span>
+              <span class="topic">Components · props</span>
+            </span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/practices/reusable-card/">
+            <span class="num">#2</span>
+            <span class="copy">
+              <span class="title">Reusable Card</span>
+              <span class="desc">Map profile data into Card components.</span>
+              <span class="topic">Lists · map()</span>
+            </span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/practices/toggle-visibility/">
+            <span class="num">#3</span>
+            <span class="copy">
+              <span class="title">Toggle Visibility</span>
+              <span class="desc">Show and hide a message with local state.</span>
+              <span class="topic">useState</span>
+            </span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/practices/fruits-search/">
+            <span class="num">#4</span>
+            <span class="copy">
+              <span class="title">Fruits Search</span>
+              <span class="desc">Debounced search that fetches fruit names.</span>
+              <span class="topic">useEffect · fetch</span>
+            </span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/practices/quiz-app/">
+            <span class="num">#5</span>
+            <span class="copy">
+              <span class="title">Quiz App</span>
+              <span class="desc">Multi-page quiz with React Router.</span>
+              <span class="topic">Router · state</span>
+            </span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
